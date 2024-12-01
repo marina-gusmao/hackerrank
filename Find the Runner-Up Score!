@@ -1,0 +1,13 @@
+# Find the Runner-Up Score!
+
+n = int(input()) # number of scores
+s = input() # scores input as string (2 4 6 6 3)
+s = s.split() # it turns the string input into an iterable object
+l = []
+n -= 1 # n will be used as element's position
+while n >= 0: # adds elements one-by-one to the list
+    l.append(int(s[n]))
+    n -=1
+l.sort() # organizes list by element's value
+L = list(set(l)) # creates a new list, excluding the repeated values
+print(L[-2]) # prints the runner-up score
